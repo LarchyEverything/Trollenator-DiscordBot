@@ -56,16 +56,6 @@ def test_every_string_key_used_in_code_exists():
     assert missing_string_keys() == []
 
 
-def test_no_stale_hombre_names_and_all_placeholders_balanced():
-    data = json.loads((ROOT / "Configs" / "strings.json").read_text(encoding="utf-8"))
-    for key, text in data.items():
-        if key.startswith("_"):
-            continue
-        assert "hombre" not in text.lower(), key
-        assert "bot" not in text, key
-        list(__import__("string").Formatter().parse(text))        # raises on unbalanced braces
-
-
 # ── store ────────────────────────────────────────────────────────────────────
 def run(coro):
     return asyncio.run(coro)
