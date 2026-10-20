@@ -1,0 +1,7 @@
+# Extra tools for developing and testing Trollenator.
+# Install with:  pip install -r requirements-dev.txt
+# Run the tests from the repo root with:  python -m pytest
+
+-r requirements.txt
+pytest>=8
+pyflakes         # optional: catches unused imports and typos (python -m pyflakes .)
