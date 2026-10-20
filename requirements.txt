@@ -1,0 +1,9 @@
+# Trollenator needs Python 3.10 or newer.
+# Install with:  pip install -r requirements.txt
+#
+# Also needed, but not installable with pip: ffmpeg (only for /voice)
+#   Debian/Ubuntu/Raspberry Pi OS:  sudo apt install ffmpeg
+
+discord.py>=2.7      # 2.7+ is required: file uploads and checkboxes inside forms
+aiohttp>=3.9         # installed with discord.py, but imported directly here
+aiosqlite>=0.20      # the ban list
